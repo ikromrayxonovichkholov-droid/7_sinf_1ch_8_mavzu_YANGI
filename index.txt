@@ -1,0 +1,559 @@
+```html
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>7-sinf — Internet xavfsizligi</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #1565c0, #6a1b9a);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+header p {
+    margin: 5px;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: white;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    color: #1565c0;
+    margin-top: 0;
+}
+
+.old-topic {
+    border-left: 6px solid #7b1fa2;
+}
+
+.today {
+    border-left: 6px solid #1565c0;
+}
+
+.goal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.goal div {
+    background: #f5f5f5;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.security {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.security div {
+    padding: 20px;
+    border-radius: 15px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+.security h3 {
+    margin-top: 0;
+    color: #6a1b9a;
+}
+
+.warning {
+    background: #fff3cd;
+    border-left: 6px solid #ff9800;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.practice {
+    background: #e8f5e9;
+    border-left: 6px solid #2e7d32;
+}
+
+ol li, ul li {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.question {
+    background: #f5f5f5;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 12px;
+}
+
+button {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+.result {
+    margin-top: 15px;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+footer {
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 10px;
+    background: #6a1b9a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>7-sinf Informatika va axborot texnologiyalari</h1>
+    <p>Amaliy mashg‘ulot</p>
+    <p><strong>Internetdan foydalanish jarayonida xavfsizlikni ta’minlash</strong></p>
+</header>
+
+<div class="container">
+
+    <!-- O‘TILGAN MAVZU -->
+    <div class="card old-topic">
+        <h2>📚 O‘tilgan mavzu</h2>
+
+        <p>
+            <strong>Sahifani formatlash buyruqlaridan foydalanish.</strong>
+        </p>
+
+        <p>
+            <strong>Print preview buyrug‘idan foydalanish.</strong>
+        </p>
+
+        <p>
+            O‘tgan darsda hujjat sahifasini kerakli ko‘rinishda
+            formatlash va uni chop etishdan oldin ko‘rib chiqish
+            usullari o‘rganildi.
+        </p>
+    </div>
+
+
+    <!-- BUGUNGI MAVZU -->
+    <div class="card today">
+        <h2>🎯 Bugungi mavzu</h2>
+
+        <p>
+            <strong>
+            Amaliy mashg‘ulot: Internetdan foydalanish jarayonida
+            xavfsizlikni ta’minlash
+            </strong>
+        </p>
+
+        <p>
+            Internetdan foydalanishda shaxsiy ma’lumotlarni,
+            hisoblarni va qurilmalarni himoya qilish muhimdir.
+        </p>
+    </div>
+
+
+    <!-- MAQSAD -->
+    <div class="card">
+        <h2>🎯 Dars maqsadi</h2>
+
+        <div class="goal">
+
+            <div>
+                🔐
+                <h3>Xavfsiz parol</h3>
+                <p>Kuchli parol yaratish va uni himoya qilishni o‘rganish.</p>
+            </div>
+
+            <div>
+                🛡️
+                <h3>Shaxsiy ma’lumot</h3>
+                <p>Shaxsiy ma’lumotlarni internetda ehtiyotkorlik bilan ishlatish.</p>
+            </div>
+
+            <div>
+                🎣
+                <h3>Phishing</h3>
+                <p>Shubhali xabar va havolalarni aniqlash.</p>
+            </div>
+
+            <div>
+                💻
+                <h3>Xavfsiz internet</h3>
+                <p>Internetdan xavfsiz va mas’uliyatli foydalanish.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- XAVFSIZLIK QOIDALARI -->
+    <div class="card">
+        <h2>🛡️ Internet xavfsizligining asosiy qoidalari</h2>
+
+        <div class="security">
+
+            <div>
+                <h3>🔐 1. Kuchli parol</h3>
+                <p>
+                    Parolda katta va kichik harflar, raqamlar va
+                    maxsus belgilar ishlatilishi maqsadga muvofiq.
+                </p>
+            </div>
+
+            <div>
+                <h3>👤 2. Shaxsiy ma’lumot</h3>
+                <p>
+                    Manzil, telefon raqami, parol kabi ma’lumotlarni
+                    begona kishilarga bermaslik kerak.
+                </p>
+            </div>
+
+            <div>
+                <h3>🎣 3. Phishing</h3>
+                <p>
+                    Shubhali havolalarni bosmaslik va noma’lum
+                    xabarlarga ishonmaslik kerak.
+                </p>
+            </div>
+
+            <div>
+                <h3>📥 4. Fayllar</h3>
+                <p>
+                    Noma’lum manbalardan fayl va dasturlarni
+                    yuklab olmaslik kerak.
+                </p>
+            </div>
+
+            <div>
+                <h3>🌐 5. Saytlar</h3>
+                <p>
+                    Sayt manzilini tekshirish va ishonchli
+                    saytlardan foydalanish kerak.
+                </p>
+            </div>
+
+            <div>
+                <h3>🚪 6. Hisobdan chiqish</h3>
+                <p>
+                    Umumiy kompyuterda ish tugagach,
+                    akkauntdan chiqish kerak.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- OGohlantirish -->
+    <div class="card warning">
+        <h2>⚠️ Eslab qoling!</h2>
+
+        <p>
+            <strong>
+            Internetdagi har bir xabar, havola yoki fayl xavfsiz
+            bo‘lavermaydi.
+            </strong>
+        </p>
+
+        <p>
+            Shubhali holatga duch kelsangiz, uni o‘qituvchi,
+            ota-ona yoki boshqa ishonchli katta kishiga ayting.
+        </p>
+    </div>
+
+
+    <!-- AMALIY MASHG‘ULOT -->
+    <div class="card practice">
+        <h2>💻 Amaliy mashg‘ulot</h2>
+
+        <ol>
+            <li>
+                Internet brauzerini ishga tushiring.
+            </li>
+
+            <li>
+                Ishonchli va shubhali sayt manzillarining
+                farqini kuzating.
+            </li>
+
+            <li>
+                Kuchli parol qanday bo‘lishi haqida misol keltiring.
+            </li>
+
+            <li>
+                Shubhali elektron xabarni aniqlashga harakat qiling.
+            </li>
+
+            <li>
+                Noma’lum havolani bosish qanday xavf tug‘dirishi
+                mumkinligini tushuntiring.
+            </li>
+        </ol>
+    </div>
+
+
+    <!-- O‘QUVCHI TOPSHIRIG‘I -->
+    <div class="card">
+        <h2>📝 O‘quvchi topshirig‘i</h2>
+
+        <p>
+            Quyidagi vaziyatlarni o‘qing va xavfsiz yoki xavfli
+            ekanligini aniqlang.
+        </p>
+
+        <ol>
+            <li>
+                Noma’lum odam sizdan parolingizni so‘radi.
+            </li>
+
+            <li>
+                Do‘stingiz sizga tanish bo‘lmagan havolani yubordi.
+            </li>
+
+            <li>
+                Siz umumiy kompyuterda ishladingiz va
+                akkauntingizdan chiqdingiz.
+            </li>
+
+            <li>
+                Noma’lum saytdan dastur yuklab olmoqchisiz.
+            </li>
+
+            <li>
+                Siz shubhali xabarni o‘qituvchiga ko‘rsatdingiz.
+            </li>
+        </ol>
+    </div>
+
+
+    <!-- MINI TEST -->
+    <div class="card">
+        <h2>🧠 Mini test</h2>
+
+        <div class="question">
+            <p><strong>1. Kuchli parol qanday bo‘lishi kerak?</strong></p>
+
+            <label>
+                <input type="radio" name="q1" value="0">
+                Faqat ism
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="1">
+                Harf, raqam va maxsus belgilar aralashmasi
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="0">
+                Faqat 123456
+            </label>
+        </div>
+
+
+        <div class="question">
+            <p><strong>2. Shubhali havola kelganda nima qilish kerak?</strong></p>
+
+            <label>
+                <input type="radio" name="q2" value="1">
+                Uni bosmaslik va tekshirish
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="0">
+                Darhol bosish
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="0">
+                Barchaga yuborish
+            </label>
+        </div>
+
+
+        <div class="question">
+            <p><strong>3. Parolni begona kishiga berish mumkinmi?</strong></p>
+
+            <label>
+                <input type="radio" name="q3" value="0">
+                Ha
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="1">
+                Yo‘q
+            </label>
+        </div>
+
+
+        <div class="question">
+            <p><strong>4. Phishing nima?</strong></p>
+
+            <label>
+                <input type="radio" name="q4" value="1">
+                Aldov orqali maxfiy ma’lumotlarni qo‘lga kiritishga urinish
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="0">
+                Kompyuter o‘yini
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="0">
+                Matn muharriri
+            </label>
+        </div>
+
+
+        <div class="question">
+            <p><strong>5. Umumiy kompyuterda ish tugagach nima qilish kerak?</strong></p>
+
+            <label>
+                <input type="radio" name="q5" value="1">
+                Akkauntdan chiqish
+            </label><br>
+
+            <label>
+                <input type="radio" name="q5" value="0">
+                Akkauntni ochiq qoldirish
+            </label>
+        </div>
+
+        <button onclick="checkTest()">Natijani ko‘rish</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+
+    <!-- XULOSA -->
+    <div class="card">
+        <h2>✅ Dars xulosasi</h2>
+
+        <p>
+            Internetdan foydalanishda xavfsizlik qoidalariga
+            rioya qilish har bir foydalanuvchining muhim vazifasidir.
+        </p>
+
+        <p>
+            <strong>
+            “O‘ylab bos! Tekshir! Himoyalan!”
+            </strong>
+        </p>
+
+        <a class="back" href="#">
+            ⬅️ Oldingi mavzu
+        </a>
+    </div>
+
+</div>
+
+
+<footer>
+    <p>© 2026 Informatika va AT — Ikrom ustoz darslari</p>
+    <p>7-sinf | Amaliy mashg‘ulot</p>
+</footer>
+
+
+<script>
+
+function checkTest() {
+
+    let score = 0;
+
+    for (let i = 1; i <= 5; i++) {
+
+        let answer = document.querySelector(
+            'input[name="q' + i + '"]:checked'
+        );
+
+        if (answer) {
+            score += Number(answer.value);
+        }
+    }
+
+    let result = document.getElementById("result");
+
+    if (score === 5) {
+        result.innerHTML =
+            "🎉 Ajoyib! Barcha javoblar to‘g‘ri. Natija: 5/5";
+    }
+    else if (score >= 3) {
+        result.innerHTML =
+            "👍 Yaxshi! Natija: " + score + "/5. Mavzuni yana bir bor takrorlang.";
+    }
+    else {
+        result.innerHTML =
+            "📚 Natija: " + score + "/5. Xavfsizlik qoidalarini yana bir bor o‘rganing.";
+    }
+}
+
+</script>
+
+</body>
+</html>
+```
